@@ -88,7 +88,7 @@ ConfigurationOfTeachable >> baseline10: spec [
         spec 
 			blessing: #baseline;
 			description: '1.0 baseline for Teachable';
-			repository: 'http://www.squeaksource.com/Teachable'.     
+			repository: 'http://smalltalkhub.com/mc/TorstenBergmann/Teachable/main'.     
 			 
         spec package: 'Teachable-Core'.
 		 spec package: 'Teachable-Tests' with: [ spec requires: #('Teachable-Core' ) ].		
