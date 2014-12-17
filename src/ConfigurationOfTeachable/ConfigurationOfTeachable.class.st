@@ -1,3 +1,6 @@
+"
+The metacello configuration for the teachable project
+"
 Class {
 	#name : #ConfigurationOfTeachable,
 	#superclass : #Object,
@@ -90,12 +93,13 @@ ConfigurationOfTeachable >> baseline10: spec [
 			description: '1.0 baseline for Teachable';
 			repository: 'http://smalltalkhub.com/mc/TorstenBergmann/Teachable/main'.     
 			 
-        spec package: 'Teachable-Core'.
+       spec package: 'Teachable-Core'.
 		 spec package: 'Teachable-Tests' with: [ spec requires: #('Teachable-Core' ) ].		
 				
 		 spec
 			group: 'all' with: #('Tests');		
-			group: 'default' with: #('Teachable-Core' );
+			group: 'default' with: #('Core' 'Tests');
+			group: 'Core' with: #('Teachable-Core' );
 			group: 'Tests' with: #('Teachable-Tests' ).
 								   
     ]
