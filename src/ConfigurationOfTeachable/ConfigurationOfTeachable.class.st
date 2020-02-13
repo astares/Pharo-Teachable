@@ -28,6 +28,36 @@ ConfigurationOfTeachable class >> bootstrapPackage: aString from: aPath [
 			version workingCopy repositoryGroup addRepository: repository]
 ]
 
+{ #category : #catalog }
+ConfigurationOfTeachable class >> catalogChangeLog [
+	"Returns a paragraph describing the most important changes in the configuration class."
+	^ ''
+]
+
+{ #category : #catalog }
+ConfigurationOfTeachable class >> catalogContactInfo [
+	"Returns a paragraph describing contact information such as email, mailing lists and website."
+	^ 'You can contact the author on the pharo mailinglist'
+]
+
+{ #category : #catalog }
+ConfigurationOfTeachable class >> catalogDescription [
+	"Returns a paragraph describing the project"
+	^ 'Provide a better file browser for Pharo.'
+]
+
+{ #category : #catalog }
+ConfigurationOfTeachable class >> catalogKeyClassesAndExample [
+	"Returns a paragraph or more describing the key classes of your project. You can use Pillar/Pier syntax to layout out the text i.e., ==Code== and - for bullet."
+	^ ' '
+]
+
+{ #category : #catalog }
+ConfigurationOfTeachable class >> catalogKeywords [
+	"Returns an array of symbols"
+	^ #(meta teaching oop) 
+]
+
 { #category : #private }
 ConfigurationOfTeachable class >> ensureMetacello [
 	"Bootstrap Gofer (if necessary), bootstrap ConfigurationOfMetacello (using old Gofer API), then load the latest 
