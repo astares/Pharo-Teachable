@@ -3,7 +3,7 @@ A teachable object for [Pharo](http://www.pharo.org).
 
 ## Intro
 
-Using the small project you can easily create objects responding to specific messages. This is useful for mocking in unit tests and other. The code goes back to an early idea of [Ernest Micklei](https://github.com/emicklei).
+Using the small project you can easily create objects responding to specific messages. This is useful for mocking in unit tests and other. The code goes back to an early idea of [Ernest Micklei](https://github.com/emicklei) with an implementation for Pharo by [Torsten Bergmann (astares)](http://www.github.com/astares).
 
 ## Quick Start
 
