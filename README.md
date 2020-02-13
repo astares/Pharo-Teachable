@@ -1,5 +1,5 @@
 # Pharo-Teachable
-A teachable object for Pharo.
+A teachable object for [Pharo](http://www.pharo.org).
 
 ## Intro
 
