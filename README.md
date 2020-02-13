@@ -25,7 +25,7 @@ teachable
     whenSend: #help return: 'ok';
     whenSend: #doit evaluate: [1 inspect];
     acceptSend: #noDebugger;
-    whenSend: #negate: evaluate: [:num num negated].
+    whenSend: #negate: evaluate: [:num | num negated].
 ```
 
 After teaching the object we can use it as if it had a normal implementation in a class:
