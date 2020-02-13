@@ -108,6 +108,37 @@ ConfigurationOfTeachable >> baseline10: spec [
 
 ]
 
+{ #category : #baselines }
+ConfigurationOfTeachable >> baseline20: spec [
+    <version: '2.0-baseline'>
+
+	spec for: #'common' do: [ 
+		spec
+			baseline: 'Teachable' with: [ 
+				spec 
+					className: 'BaselineOfTeachable';
+					repository: 'github://astares/Pharo-Teachable:master/src' ]]
+]
+
+{ #category : #baselines }
+ConfigurationOfTeachable >> baseline30: spec [
+    <version: '3.0-baseline'>
+
+	spec for: #'common' do: [ 
+		spec
+			baseline: 'Teachable' with: [ 
+				spec 
+					className: 'BaselineOfTeachable';
+					repository: 'github://astares/Pharo-Teachable:master/src' ]]
+]
+
+{ #category : #'symbolic versions' }
+ConfigurationOfTeachable >> development: spec [
+	<symbolicVersion: #'development'>
+
+	spec for: #'common' version: '3.0-baseline'
+]
+
 { #category : #accessing }
 ConfigurationOfTeachable >> project [
 
@@ -125,7 +156,7 @@ ConfigurationOfTeachable >> project [
 ConfigurationOfTeachable >> stable: spec [
 	<symbolicVersion: #'stable'>
 
-	spec for: #'common' version: '1.0'.
+	spec for: #'common' version: '2.0'.
 ]
 
 { #category : #versions }
@@ -140,4 +171,16 @@ ConfigurationOfTeachable >> version10: spec [
 		spec package: 'Teachable-Core' with: 'Teachable-Core-tbn.1'.
 		spec package: 'Teachable-Tests' with: 'Teachable-Tests-tbn.1'.		
 	]
+]
+
+{ #category : #versions }
+ConfigurationOfTeachable >> version20: spec [
+	<version: '2.0'>
+
+	spec for: #'common' do: [ 
+		spec
+			baseline: 'Teachable' with: [ 
+				spec 
+					className: 'BaselineOfTeachable';
+					repository: 'github://astares/Pharo-Teachable:2.0/src' ]]
 ]
