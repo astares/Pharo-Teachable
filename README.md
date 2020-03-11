@@ -16,7 +16,7 @@ Metacello new
 
 ## Documentation
 
-It's an implementation of a Teachable class who's instances can be teached to respond to messages. It's usefull for creating mocks who should behave like other objects (for instance inside of a test case) without actually implementing a real mock class. Here is an example how it can be used:
+It's an implementation of a Teachable class who's instances can be taught to respond to messages. It's usefull for creating mocks who should behave like other objects (for instance inside of a test case) without actually implementing a real mock class. Here is an example how it can be used:
 
 ```Smalltalk
 |teachable|
