@@ -1,0 +1,16 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Teachable',
+      #directory : '../src',
+      #load : [ 'Tests' ],
+      #platforms : [  #pharo ]
+    }
+  ],
+  #testing : {
+    #coverage : {
+      #packages : [ 'Teachable*' ],
+      #format: #lcov
+    }
+  }
+}

@@ -45,7 +45,7 @@ TeachableTest >> tearDown [
 
 { #category : #testing }
 TeachableTest >> testAcceptSendWithBinaryMessage [
-	"Test if the teachable object is able to accept a message send it is teached"
+	"Test if the teachable object is able to accept a message send it is taught"
 	
 	self should: [self teachable + 3] raise: Exception.
 	self teachable acceptSend: #+.
@@ -54,7 +54,7 @@ TeachableTest >> testAcceptSendWithBinaryMessage [
 
 { #category : #testing }
 TeachableTest >> testAcceptSendWithKeyWordMessage [
-	"Test if the teachable object is able to accept a message send it is teached"
+	"Test if the teachable object is able to accept a message send it is taught"
 	
 	self should: [self teachable foo: 3] raise: Exception.
 	self teachable acceptSend: #foo:.
@@ -63,7 +63,7 @@ TeachableTest >> testAcceptSendWithKeyWordMessage [
 
 { #category : #testing }
 TeachableTest >> testAcceptSendWithUnaryMessage [
-	"Test if the teachable object is able to accept a message send it is teached"
+	"Test if the teachable object is able to accept a message send it is taught"
 
 	self should: [self teachable foo] raise: Exception.
 	self teachable acceptSend: #foo.
@@ -112,7 +112,7 @@ TeachableTest >> testWhenSendEvaluateWithOneArgumentBlock [
 
 { #category : #testing }
 TeachableTest >> testWhenSendWithReturnValue [
-	"Tests teaching the teachable to respond to a teached message with a return value"
+	"Tests teaching the teachable to respond to a taught message with a return value"
 	
 	|object|
 	object := OrderedCollection new.

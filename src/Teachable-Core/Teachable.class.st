@@ -38,7 +38,7 @@ Teachable >> acceptSend: aSymbol [
 
 { #category : #private }
 Teachable >> doesNotUnderstand: aMessage [
-	"We override this message to check if the receiver was teached to understand the given message"
+	"We override this message to check if the receiver was taught to understand the given message"
 
 	| learning |
 	learning := self learnings 

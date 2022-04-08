@@ -37,7 +37,7 @@ ConfigurationOfTeachable class >> catalogChangeLog [
 { #category : #catalog }
 ConfigurationOfTeachable class >> catalogContactInfo [
 	"Returns a paragraph describing contact information such as email, mailing lists and website."
-	^ 'You can contact the author on the pharo mailinglist'
+	^ 'You can contact the author on the pharo mailing list'
 ]
 
 { #category : #catalog }
