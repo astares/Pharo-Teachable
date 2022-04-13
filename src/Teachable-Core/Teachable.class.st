@@ -52,9 +52,9 @@ Teachable >> doesNotUnderstand: aMessage [
 { #category : #private }
 Teachable >> learnings [
 	"Returns a dictionary with the receivers knowledge"
-	
-	learnings isNil ifTrue: [learnings := Dictionary new].
-	^learnings
+
+	learnings ifNil: [ learnings := Dictionary new ].
+	^ learnings
 ]
 
 { #category : #teaching }

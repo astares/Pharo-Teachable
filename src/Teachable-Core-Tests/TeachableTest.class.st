@@ -27,11 +27,13 @@ TeachableTest >> setUp [
 
 { #category : #accessing }
 TeachableTest >> teachable [
+
 	^teachable
 ]
 
 { #category : #accessing }
 TeachableTest >> teachable: anObject [
+
 	teachable := anObject
 ]
 
@@ -72,12 +74,13 @@ TeachableTest >> testAcceptSendWithUnaryMessage [
 
 { #category : #testing }
 TeachableTest >> testInstanceCreation [
+
 	"Test the instance creation of the teachable"
-	
+
 	| instance |
 	instance := self defaultTestClass new.
 	self assert: instance notNil.
-	self assert: instance class = self defaultTestClass
+	self assert: instance class equals: self defaultTestClass
 ]
 
 { #category : #testing }
@@ -103,10 +106,10 @@ TeachableTest >> testWhenSendEvaluateWithOneArgumentBlock [
 	self should: [self teachable foo: #uninteresting] raise: Exception.
 	self teachable whenSend: #foo: evaluate: [:arg | called := arg. 1].
 	self shouldnt: [self teachable foo: #uninteresting] raise: Exception.
-	self assert: (self teachable foo: true) = 1.
+	self assert: (self teachable foo: true) equals: 1.
 	self assert: called.
-	self assert: (self teachable foo: false) = 1.
-	self assert: called not.
+	self assert: (self teachable foo: false) equals: 1.
+	self assert: called not
 
 ]
 
