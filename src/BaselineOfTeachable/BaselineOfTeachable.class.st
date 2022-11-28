@@ -7,7 +7,7 @@ Class {
 	#category : #BaselineOfTeachable
 }
 
-{ #category : #baseline }
+{ #category : #baselines }
 BaselineOfTeachable >> baseline: spec [
 	<baseline>
 	
