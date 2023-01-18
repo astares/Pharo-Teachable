@@ -10,18 +10,19 @@ Class {
 { #category : #baselines }
 BaselineOfTeachable >> baseline: spec [
 	<baseline>
-	
+
 	spec for: #common do: [
-		"Packages" 
-		spec 
-			package: 'Teachable-Core'; 
+		"Packages"
+		spec
+			package: 'Teachable-Core';
 			package: 'Teachable-Core-Tests' with: [ spec requires: #('Teachable-Core') ].
-			
-		"Groups"	
-			spec	
+
+		"Groups"
+			spec
 				group: 'Core' with: #('Teachable-Core');
 				group: 'Tests' with: #('Teachable-Core-Tests');
+				group: 'CI' with: #('Tests');
 				group: 'all' with: #('Core' 'Tests');
-				group: 'default' with: #('all')	
+				group: 'default' with: #('all')
 	]
 ]

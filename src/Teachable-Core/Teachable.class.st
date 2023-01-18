@@ -16,13 +16,14 @@ Class {
 
 { #category : #examples }
 Teachable class >> example [
+
 	| teachable |
 	teachable := self new.
-	teachable 
+	teachable
 		whenSend: #help return: 'ok';
-		whenSend: #doit evaluate: [1 inspect];
+		whenSend: #doit evaluate: [ 1 inspect ];
 		acceptSend: #noDebugger;
-		whenSend: #negate: evaluate: [:num | num negated].
+		whenSend: #negate: evaluate: [ :num | num negated ].
 	teachable help.
 	teachable doit.
 	teachable noDebugger.
@@ -32,17 +33,17 @@ Teachable class >> example [
 { #category : #teaching }
 Teachable >> acceptSend: aSymbol [
 	"Teach the receiver to accept a message with the given symbol"
-	
+
 	self whenSend: aSymbol return: self
 ]
 
-{ #category : #private }
+{ #category : #'reflective operations' }
 Teachable >> doesNotUnderstand: aMessage [
 	"We override this message to check if the receiver was taught to understand the given message"
 
 	| learning |
-	learning := self learnings 
-		at: aMessage selector 
+	learning := self learnings
+		at: aMessage selector
 		ifAbsent:[ ^super doesNotUnderstand: aMessage ].
 	^ learning class == Association
 		ifTrue: [learning value]
@@ -60,13 +61,13 @@ Teachable >> learnings [
 { #category : #teaching }
 Teachable >> whenSend: aSymbol evaluate: aBlock [
 	"Teach the receiver to evaluate a block when when he receives a message identified by the given Symbol"
-	
+
 	self learnings at: aSymbol put: aBlock
 ]
 
 { #category : #teaching }
 Teachable >> whenSend: aSymbol return: anObject [
 	"Teach the receiver to return the given object when he receives a message identified by the given Symbol"
-	
+
 	self learnings at: aSymbol put: (#return -> anObject)
 ]
