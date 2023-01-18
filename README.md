@@ -3,7 +3,7 @@
 A teachable object for [Pharo](http://www.pharo.org).
 
 [![Unit Tests](https://github.com/astares/Pharo-Teachable/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/astares/Pharo-Teachable/actions/workflows/unit-tests.yml)
-[![Coverage Status](https://codecov.io/github/astares/Pharo-Teachable/coverage.svg?branch=master)](https://codecov.io/gh/astares/Pharo-Teachable/branch/master)
+[![Coverage Status](https://codecov.io/github/astares/Pharo-Teachable/coverage.svg?branch=main)](https://codecov.io/gh/astares/Pharo-Teachable/branch/main)
 [![Baseline Groups](https://github.com/astares/Pharo-Teachable/actions/workflows/loading-groups.yml/badge.svg)](https://github.com/astares/Pharo-Teachable/actions/workflows/loading-groups.yml)
 
 [![Pharo 8.0](https://img.shields.io/badge/Pharo-8.0-informational)](https://pharo.org)
@@ -24,7 +24,7 @@ implementation for Pharo by [Torsten Bergmann (astares)](http://www.github.com/a
 
 ```Smalltalk
 Metacello new 
-  repository: 'github://astares/Pharo-Teachable/src';
+  repository: 'github://astares/Pharo-Teachable:main/src';
   baseline: 'Teachable';
   load
 ```
