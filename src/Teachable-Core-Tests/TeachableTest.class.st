@@ -49,7 +49,7 @@ TeachableTest >> tearDown [
 TeachableTest >> testAcceptSendWithBinaryMessage [
 	"Test if the teachable object is able to accept a message send it is taught"
 
-	self should: [ self teachable + 3 ] raise: Exception.
+	self should: [ self teachable + 3 ] raise: MessageNotUnderstood.
 	self teachable acceptSend: #+.
 	self teachable + 3
 ]
@@ -58,7 +58,7 @@ TeachableTest >> testAcceptSendWithBinaryMessage [
 TeachableTest >> testAcceptSendWithKeyWordMessage [
 	"Test if the teachable object is able to accept a message send it is taught"
 
-	self should: [ self teachable foo: 3 ] raise: Exception.
+	self should: [ self teachable foo: 3 ] raise: MessageNotUnderstood.
 	self teachable acceptSend: #foo:.
 	self teachable foo: 3
 ]
@@ -67,7 +67,7 @@ TeachableTest >> testAcceptSendWithKeyWordMessage [
 TeachableTest >> testAcceptSendWithUnaryMessage [
 	"Test if the teachable object is able to accept a message send it is taught"
 
-	self should: [ self teachable foo ] raise: Exception.
+	self should: [ self teachable foo ] raise: MessageNotUnderstood.
 	self teachable acceptSend: #foo.
 	self teachable foo
 ]
@@ -88,7 +88,7 @@ TeachableTest >> testWhenSendEvaluate [
 
 	| called |
 	called := false.
-	self should: [ self teachable foo ] raise: Exception.
+	self should: [ self teachable foo ] raise: MessageNotUnderstood.
 	self teachable whenSend: #foo evaluate: [  called := true. 1 ].
 	self teachable foo.
 	self assert: self teachable foo equals: 1.
@@ -101,7 +101,7 @@ TeachableTest >> testWhenSendEvaluateWithOneArgumentBlock [
 
 	| called |
 	called := false.
-	self should: [ self teachable foo: #uninteresting ] raise: Exception.
+	self should: [ self teachable foo: #uninteresting ] raise: MessageNotUnderstood.
 	self teachable whenSend: #foo: evaluate: [ :arg | called := arg. 1 ].
 	self teachable foo: #uninteresting.
 	self assert: (self teachable foo: true) equals: 1.
@@ -116,7 +116,7 @@ TeachableTest >> testWhenSendWithReturnValue [
 
 	| object |
 	object := OrderedCollection new.
-	self should: [ self teachable foo ] raise: Exception.
+	self should: [ self teachable foo ] raise: MessageNotUnderstood.
 	self teachable whenSend: #foo return: object.
 	self teachable foo.
 	self assert: self teachable foo identicalTo: object
