@@ -1,4 +1,3 @@
 {
-	'srcDirectory' : 'src',
-        'tags' : [ #astares ]
+	'srcDirectory' : 'src'
 }
