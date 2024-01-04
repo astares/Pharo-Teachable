@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'teachable'
 	],
-	#category : #'Teachable-Core-Tests'
+	#category : #'Teachable-Core-Tests-Base'
 }
 
 { #category : #defaults }

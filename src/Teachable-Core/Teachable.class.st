@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'learnings'
 	],
-	#category : #'Teachable-Core'
+	#category : #'Teachable-Core-Base'
 }
 
 { #category : #examples }
